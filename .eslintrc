@@ -1,0 +1,12 @@
+{
+  "extends": [
+	"react-app",
+	"eslint:recommended"
+  ],
+  "rules": {
+	"jsx-quotes": ["error", "prefer-single"],
+	"quotes": ["error", "single"],
+	"semi": ["error", "always"],
+	"semi-style": ["error", "last"]
+  }
+}
