@@ -6,14 +6,6 @@ import {connect, useDispatch} from 'react-redux';
 import {showLogin, showLogout} from '../js/action/DemoAction';
 
 
-const onClickHandler = (dispatch, login) => {
-    if (!login) {
-        dispatch(showLogin());
-    } else {
-        dispatch(showLogout());
-    }
-};
-
 const Demo5 = (props) => {
     const dispatch = useDispatch();
     const {is_login, username} = props;
@@ -26,6 +18,14 @@ const Demo5 = (props) => {
             <Link to='/'>Back to main page</Link>
         </div>
     );
+};
+
+const onClickHandler = (dispatch, login) => {
+    if (!login) {
+        dispatch(showLogin());
+    } else {
+        dispatch(showLogout());
+    }
 };
 
 const mapStateToProps = (state) => {
