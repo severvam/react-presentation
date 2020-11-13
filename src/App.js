@@ -12,25 +12,24 @@ import store from './js/store';
 import {Provider} from 'react-redux';
 
 
-
 function App() {
     return (
-        <Provider store={store}>
-            <BrowserRouter>
-                <Switch>
-                    <div className='App'>
-                        <header className='App-header'>
-                            <img src={logo} className='App-logo' alt='logo'/>
+        <div className='App'>
+            <header className='App-header'>
+                <img src={logo} className='App-logo' alt='logo'/>
+                <Provider store={store}>
+                    <BrowserRouter>
+                        <Switch>
                             <Route path='/' component={ReactHello} exact/>
                             <Route path='/demo1' component={Demo1}/>
                             <Route path='/demo2' component={Demo2}/>
                             <Route path='/demo4' component={Demo4}/>
                             <Route state={store.getState()} path='/demo5' component={Demo5}/>
-                        </header>
-                    </div>
-                </Switch>
-            </BrowserRouter>
-        </Provider>
+                        </Switch>
+                    </BrowserRouter>
+                </Provider>
+            </header>
+        </div>
     );
 }
 

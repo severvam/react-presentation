@@ -16,7 +16,6 @@ class ClassComponentState extends React.Component {
 
     componentWillUnmount() {
         clearInterval(this.timerID);
-        console.log('unmount');
     }
 
     render() {
