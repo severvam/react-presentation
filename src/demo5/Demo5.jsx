@@ -16,11 +16,12 @@ const onClickHandler = (dispatch, login) => {
 
 const Demo5 = (props) => {
     const dispatch = useDispatch();
+    const {is_login, username} = props;
     return (
         <div>
-            <p>User Login Status: {props.is_login ? 'Logged In' : 'Anonymous'}</p>
+            <p>User Login Status: {is_login ? 'Logged In as ' + username : 'Anonymous'}</p>
             <div className='fancy-button-margin'>
-                <button onClick={(event) => onClickHandler(dispatch, props.is_login)}>Change state</button>
+                <button onClick={(event) => onClickHandler(dispatch, is_login)}>Change state</button>
             </div>
             <Link to='/'>Back to main page</Link>
         </div>
@@ -28,10 +29,11 @@ const Demo5 = (props) => {
 };
 
 const mapStateToProps = (state) => {
-    const {DemoReducer: {is_login}} = state;
+    const {DemoReducer: {is_login, username}} = state;
 
     return {
-        is_login
+        is_login,
+        username
     };
 };
 
