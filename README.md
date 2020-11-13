@@ -4,7 +4,7 @@ How to run.
 
 Requirements:
 
-node 15.1.0
+node 15.1.0  
 npm 7.0.8
 
 First run
