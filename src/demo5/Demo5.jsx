@@ -13,7 +13,7 @@ const Demo5 = (props) => {
         <div>
             <p>User Login Status: {is_login ? 'Logged In as ' + username : 'Anonymous'}</p>
             <div className='fancy-button-margin'>
-                <button onClick={(event) => onClickHandler(dispatch, is_login)}>Change state</button>
+                <button onClick={() => onClickHandler(dispatch, is_login)}>Change state</button>
             </div>
             <Link to='/'>Back to main page</Link>
         </div>
